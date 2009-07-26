@@ -151,7 +151,7 @@
             exit(EXIT_FAILURE);
         }
         if (argc > 3) {
-            NSString* ver = [NSString stringWithCString:argv[3]];
+            NSString* ver = [NSString stringWithCString:argv[3] encoding:NSUTF8StringEncoding];
             NSArray *roots = [DTiPhoneSimulatorSystemRoot knownRoots];
             for (DTiPhoneSimulatorSystemRoot *root in roots) {
                 NSString *v = [root sdkVersion];
